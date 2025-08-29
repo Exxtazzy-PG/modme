@@ -1,0 +1,159 @@
+.navbar {
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px 10px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.navbar.dark {
+  background: #1f2937;
+  border-right-color: #374151;
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+  width: 100%;
+  gap: 12px;
+}
+
+.nav-item:hover {
+  background: #f3f4f6;
+}
+
+.nav-item.active {
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+.navbar.dark .nav-item:hover {
+  background: #374151;
+}
+
+.navbar.dark .nav-item.active {
+  background: #1e3a8a;
+  color: #93c5fd;
+}
+
+.nav-item-icon {
+  flex-shrink: 0;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.nav-item:hover .nav-item-icon,
+.nav-item.active .nav-item-icon {
+  color: #1e40af;
+}
+
+.navbar.dark .nav-item-icon {
+  color: #9ca3af;
+}
+
+.navbar.dark .nav-item:hover .nav-item-icon,
+.navbar.dark .nav-item.active .nav-item-icon {
+  color: #93c5fd;
+}
+
+.nav-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-item-label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-item.active .nav-item-label {
+  color: #1e40af;
+}
+
+.navbar.dark .nav-item-label {
+  color: #d1d5db;
+}
+
+.navbar.dark .nav-item.active .nav-item-label {
+  color: #93c5fd;
+}
+
+.nav-item-count {
+  display: block;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.nav-item.active .nav-item-count {
+  color: #3b82f6;
+}
+
+.navbar.dark .nav-item-count {
+  color: #6b7280;
+}
+
+.navbar.dark .nav-item.active .nav-item-count {
+  color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 0;
+  }
+  
+  .navbar.dark {
+    border-bottom-color: #374151;
+  }
+  
+  .navbar-content {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 16px;
+    gap: 16px;
+  }
+  
+  .nav-item {
+    flex-direction: column;
+    min-width: 120px;
+    padding: 12px 8px;
+    gap: 6px;
+  }
+  
+  .nav-item-content {
+    text-align: center;
+  }
+  
+  .nav-item-label {
+    font-size: 0.75rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  
+  .nav-item-count {
+    font-size: 0.7rem;
+  }
+}
